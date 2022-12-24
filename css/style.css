@@ -1,0 +1,153 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+  --feri: #070768;
+}
+
+
+
+
+.grid_conteiner {
+  width: 100vw;
+  height: 100vh;
+  font-size: 50px;
+
+  /* border: 5px solid red; */
+
+  display: grid;
+
+  grid-template-columns: 25% 25% 25% 25%;
+
+  grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "main main . image"
+    "main main . image"
+    "main main . extra"
+    "main main . extra"
+    "banner banner banner banner"
+    "banner banner banner banner"
+    "banner banner banner banner"
+  ;
+}
+
+.grid_conteiner div {
+  font-size: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header {
+
+  grid-area: header;
+  background-color: var(--feri);
+
+}
+
+.menu {
+
+  grid-area: menu;
+  background-color: rgb(237, 28, 74);
+
+}
+
+.hero {
+
+  grid-area: hero;
+  background-color: rgb(76, 76, 244);
+
+}
+
+.main {
+
+  grid-area: main;
+  background-color: rgb(18, 18, 139);
+
+
+}
+
+
+.image {
+
+  grid-area: image;
+  background-color: rgb(136, 178, 136);
+
+}
+
+.extra {
+
+  grid-area: extra;
+  background-color: green;
+
+}
+
+.banner {
+
+  grid-area: banner;
+  background-color: rgb(129, 129, 5);
+
+}
+
+@media screen and (max-width:768px) {
+  .grid_conteiner {
+
+
+    grid-template-areas:
+      "header header header header"
+      "hero hero hero hero"
+      "hero hero hero hero"
+      "hero hero hero hero"
+      "hero hero hero hero"
+      "menu main main main"
+      "menu main main main"
+      "menu main main main"
+      "menu banner banner banner"
+      "menu banner banner banner"
+      "menu extra extra image"
+      "menu extra extra image"
+    ;
+
+  }
+  }
+
+  @media screen and (max-width:480px) {
+
+    .grid_conteiner {
+
+
+      grid-template-columns: 100%;
+
+      grid-template-areas:
+        "header"
+        "menu"
+        "hero"
+        "hero"
+        "hero"
+        "main"
+        "main"
+        "main"
+        "banner"
+        "banner"
+        "extra"
+        "extra"
+        "image"
+        "image"
+
+      ;
+
+    }
+
+
+  }
